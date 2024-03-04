@@ -1,0 +1,121 @@
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+title: "Dashboard"
+subtitle: "Home"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true 
+footer: '<p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a href="https://vuejs.org/">vuejs</a> & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i class="fab fa-github-alt"></i></a></p>' # set false if you want to hide it.
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+links:
+  - name: "gaynetdinov.ru"
+    url: "https://gaynetdinov.ru"
+    target: "_blank" # optional html a tag target attribute
+  - name: "Notion"
+    url: "https://gaynetdinov.notion.site/gaynetdinov-com-370c3aa47a154b9fa083c1c3db42de72"
+    target: "_blank"
+  - name: "Cloudflare Dash"
+    url: "https://dash.cloudflare.com/"
+    target: "_blank"
+
+services:
+  - name: "Media"
+    icon: "fas fa-film"
+    items:
+      - name: "qBittorrent"
+        logo: "assets/icons/qbittorent.png"
+        url: "http://100.109.127.67:9000"
+        target: "_blank"
+      - name: "Plex"
+        logo: "assets/icons/plex.png"
+        url: "http://192.168.0.103:32400/web/index.html"
+        target: "_blank"
+      - name: "FreshRSS"
+        logo: "assets/icons/freshrss.png"
+        url: "https://rss-rosy.gaynetdinov.com/"
+        target: "_blank"
+
+  - name: "Cloud Home"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Router (Rosy)"
+        logo: "assets/icons/tplink.png"
+        url: "http://192.168.0.1"
+        target: "_blank"
+      - name: "Proxmox Zeus"
+        logo: "assets/icons/proxmox.png"
+        url: "https://pve-zeus-rosy.gaynetdinov.com/#v1:0:=node%2FPVE1:4:::::::"
+        target: "_blank"
+      - name: "TrueNAS Scale"
+        logo: "assets/icons/truenas.png"
+        url: "https://truenas-scale-rosy.gaynetdinov.com/"
+        target: "_blank"
+      - name: "Portainer.io"
+        logo: "assets/icons/portainer.png"
+        url: "https://portainer-rosy.gaynetdinov.com/"
+        target: "_blank"
+      - name: "Proxmox Backup"
+        logo: "assets/icons/proxmox.png"
+        url: "https://192.168.0.201:8007/#pbsDashboard"
+        target: "_blank"
+
+  - name: "AI"
+    icon: "fas fa-solid fa-arrow-up-right-from-square" 
+    items:
+      - name: "ChatGPT"
+        url: "https://chat.openai.com/chat"
+        target: "_blank"
+      - name: "DALL·E"
+        url: "https://labs.openai.com/"
+        target: "_blank"
+      - name: "Anthropic"
+        url: "https://chat.claudeai.ai/chats"
+        target: "_blank"
+      - name: "ChatGPT (local)"
+        url: "http://192.168.0.114:5432"
+        target: "_blank"
+      - name: "Colab Google"
+        url: "https://colab.research.google.com/"
+        target: "_blank"
+
+  - name: "Bookmarklets"
+    icon: "fas fa-bookmark"
+    items:
+      - name: "Telegram to Rss"
+        url: "javascript:(function()%20{const%20telegramCh%20=%20prompt('Write%20telegram%20channel:%20');const%20rss%20=%20`https://rsshub.app/telegram/channel/${telegramCh}`;alert('Coping%20to%20clipboard:%20\n'%20+%20rss);}());"
+      - name: "Email message id"
+        url: "javascript:(function()%7Bconst%20messageId%20%3D%20prompt(%22paste%20message%20email%20id%22)%3Bconst%20decodeMessageId%20%3D%20encodeURIComponent(messageId)%3Balert(%60message%3A%2F%2F%24%7BdecodeMessageId%7D%60)%7D)()"
+      - name: "My IP"
+        url: "javascript:(function(){%20fetch('https://httpbin.org/ip').then(response%20=>%20response.json()).then(data%20=>%20alert(data.origin))%20})();"
