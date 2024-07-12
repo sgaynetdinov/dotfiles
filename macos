@@ -1,7 +1,9 @@
 ### ScreenShot
 - defaults write com.apple.screencapture type jpg // filetype by jpg
+- defaults write com.apple.screencapture quality 1
 - defaults write com.apple.screencapture disable-shadow -bool true // disable shadow
 - defaults write com.apple.screencapture location ~/Downloads // folder saved screenshot
+- defaults write com.apple.screencapture "include-date" -bool false
 
 ### Dock
 - defaults write com.apple.dock tilesize -int 40
